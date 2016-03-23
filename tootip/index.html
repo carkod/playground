@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Javascript playground</title>
+		<link rel="stylesheet" type="text/css" href="includes/tooltip.css" />
+		<script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="includes/tooltip.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<link rel="stylesheet" type="text/css" href="includes/tooltip_ie.css" />
+		<![endif]-->
+	</head>
+	<body>
+		<div class="page">
+			<header>
+				<a class="logo" href="#"></a>
+			</header>
+			<article>
+				<h1>Heading</h1>
+				<aside>
+					<h2>Aside Heading</h2>
+					<p>Lorem ipsum dolor sit amet consectetur <a href="#">HTML-based tooltip</a> adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</aside>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#" class="tooltip" title="This is a tooltip">text-based tooltip</a> laboris nisi ut aliquip consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				
+				<div id="info">
+				<h1>Javasript info</h1>	
+					<div id="mousePosition">
+						<div class="tooltipContainer">This is Tooltip</div>
+						<div class="clear"></div>
+						<button id="click">Click here</button><br />
+						<p>Number Clicks: <span id="numClicks"></span></p>
+						<p>Mouse position: (<span id="pageX">0</span>, <span id="pageY">0</span>)</p>
+					</div>
+					<script type="text/javascript" src="includes/tooltip.js"></script>
+					
+					<script type="text/javascript">
+					
+					
+					jQuery(document).ready(function(){
+						
+						var noClicks = 0;
+						$('#numClicks').html(noClicks);
+						
+						$('#click').click(function(e){
+							noClicks ++;
+							$('#numClicks').html(noClicks);
+							
+							
+							
+							
+							
+							$(document).mousemove(function(e) {
+								var PageX = e.pageX;
+							var PageY = e.pageY;
+							    $("#pageX").html(PageX);
+							    $("#pageY").html(PageY);
+							})
+
+						});
+					
+					});	
+					</script>
+					
+					
+				</div>
+				
+				
+				<div class="clear-all"></div>
+			</article>
+			<footer>Your company name.</footer>
+			
+		</div>
+	</body>
+</html>
